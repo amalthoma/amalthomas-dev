@@ -1,0 +1,36 @@
+# --- Environment Variables (CRITICAL) ---
+# Never commit your EmailJS or API keys to GitHub
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- Dependencies ---
+node_modules/
+jspm_packages/
+
+# --- Build Outputs ---
+dist/
+build/
+out/
+.vercel/
+.netlify/
+
+# --- IDE & Editor Settings ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- TypeScript ---
+*.tsbuildinfo
+.vercel

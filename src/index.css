@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* HSL Values for easy manipulation */
+  
+  /* Developer Dark Theme (Default) */
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  
+  --card: 217 33% 17%;
+  --card-foreground: 210 40% 98%;
+  
+  --popover: 222 47% 11%;
+  --popover-foreground: 210 40% 98%;
+  
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 47% 11%;
+  
+  --secondary: 217 33% 17%;
+  --secondary-foreground: 210 40% 98%;
+  
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20.2% 65.1%;
+  
+  --accent: 217 91% 60%;
+  --accent-foreground: 222 47% 11%;
+  
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --border: 217 33% 17%;
+  --input: 217 33% 17%;
+  --ring: 224 76% 48%;
+  
+  --radius: 0.75rem;
+  
+  /* Syntax Highlighting Colors for accents */
+  --syntax-keyword: 286 60% 67%;  /* Purple */
+  --syntax-string: 95 38% 62%;    /* Green */
+  --syntax-func: 207 82% 66%;     /* Blue */
+  --syntax-number: 29 54% 61%;    /* Orange */
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+.light {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  
+  --primary: 221 83% 53%;
+  --primary-foreground: 210 40% 98%;
+  
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222 47% 11.2%;
+  
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222 47% 11.2%;
+  
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221 83% 53%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight;
+  }
+  
+  /* Custom Scrollbar for that developer feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full hover:bg-muted-foreground/50 transition-colors;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+  
+  .glass-panel {
+    @apply bg-card/50 backdrop-blur-xl border border-border/50 shadow-xl;
+  }
+  
+  .code-block {
+    @apply font-mono bg-secondary/50 p-1 rounded text-sm text-primary;
+  }
+}
