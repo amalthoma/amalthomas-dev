@@ -8,7 +8,8 @@ export const profile = {
   phone: "+91 8848689262",
   github: "https://github.com/amalthoma",
   linkedin: "https://www.linkedin.com/in/amal-thomas-67aa0a263",
-  resumeUrl: "/AMAL_THOMAS_Resume.pdf"
+  resumeUrl: "/AMAL_THOMAS_Resume.pdf",
+  imageUrl: "/images/profile.png"
 };
 
 export const skills = [
