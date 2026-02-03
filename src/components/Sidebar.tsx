@@ -96,11 +96,11 @@ export function Sidebar() {
             </div>
           </div>
           <div className="flex gap-2 justify-center">
-            <a href="https://github.com/amalthomas-10" target="_blank" rel="noopener noreferrer" 
+            <a href="https://github.com/amalthoma" target="_blank" rel="noopener noreferrer" 
               className="p-2 rounded-lg hover:bg-background text-muted-foreground hover:text-foreground transition-colors">
               <Github className="w-4 h-4" />
             </a>
-            <a href="https://www.linkedin.com/in/amal-thomas-10" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/amal-thomas-67aa0a263" target="_blank" rel="noopener noreferrer"
               className="p-2 rounded-lg hover:bg-background text-muted-foreground hover:text-foreground transition-colors">
               <Linkedin className="w-4 h-4" />
             </a>

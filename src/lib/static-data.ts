@@ -2,14 +2,13 @@ export const profile = {
   id: 1,
   name: "Amal Thomas",
   role: "Fullstack Developer",
-  imageUrl: "/images/profile.png",
   bio: "Committed Fullstack Developer with extensive experience collaborating with cross-functional teams to produce high-quality solutions in growth-driven environments. Specialized in Python, Django, React, and Next.js.",
   location: "Kannur, India",
   email: "amalthomasktyr@gmail.com",
   phone: "+91 8848689262",
   github: "https://github.com/amalthoma",
   linkedin: "https://www.linkedin.com/in/amal-thomas-67aa0a263",
-  resumeUrl: "/Amal_Thomas_FullStack_Resume.pdf"
+  resumeUrl: "/AMAL_THOMAS_Resume.pdf"
 };
 
 export const skills = [

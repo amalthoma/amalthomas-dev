@@ -2,7 +2,7 @@ import { useProfile } from "@/hooks/use-portfolio";
 import { PageHeader } from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Phone, Download } from "lucide-react";
 
 export default function About() {
   const { data: profile, isLoading } = useProfile();
@@ -60,8 +60,12 @@ export default function About() {
             <div className="mt-6 pt-6 border-t border-border">
               <a 
                 href={profile?.resumeUrl || "#"} 
-                className="block w-full py-2.5 rounded-lg bg-foreground text-background font-bold text-center hover:bg-foreground/90 transition-colors"
+                download="Amal_Thomas_Resume.pdf"
+                className="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-primary text-primary-foreground font-bold text-center hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5"
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                <Download className="w-4 h-4" />
                 Download Resume
               </a>
             </div>
