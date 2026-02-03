@@ -104,6 +104,16 @@
   ::-webkit-scrollbar-thumb {
     @apply bg-muted rounded-full hover:bg-muted-foreground/50 transition-colors;
   }
+
+  /* Fix mobile touch events */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Ensure proper touch target sizing */
+  button, a, input, textarea, select {
+    @apply touch-manipulation;
+  }
 }
 
 @layer utilities {

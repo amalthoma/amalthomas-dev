@@ -21,7 +21,7 @@ function Router() {
   return (
     <div className="min-h-screen bg-background text-foreground flex">
       <Sidebar />
-      <main className="flex-1 lg:ml-72 min-w-0">
+      <main className="flex-1 lg:ml-72 min-w-0 relative z-10">
         <div className="container mx-auto max-w-7xl p-4 md:p-8 lg:p-12 mt-16 lg:mt-0">
           <Switch>
             <Route path="/" component={Home} />

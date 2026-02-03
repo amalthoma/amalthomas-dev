@@ -116,7 +116,7 @@ export function Sidebar() {
   return (
     <>
       {/* Mobile Toggle */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-background/80 backdrop-blur-md border-b border-border">
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-30 flex items-center justify-between p-4 bg-background/80 backdrop-blur-md border-b border-border">
         <h1 className="text-lg font-bold font-display">Amal.Dev</h1>
         <button 
           onClick={() => setIsOpen(!isOpen)}
@@ -127,7 +127,7 @@ export function Sidebar() {
       </div>
 
       {/* Desktop Sidebar */}
-      <aside className="hidden lg:block w-72 fixed inset-y-0 left-0 z-40">
+      <aside className="hidden lg:block w-72 fixed inset-y-0 left-0 z-20">
         <SidebarContent />
       </aside>
 
