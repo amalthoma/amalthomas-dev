@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTheme } from "@/components/theme-provider";
 
 const navItems = [
@@ -132,28 +132,21 @@ export function Sidebar() {
       </aside>
 
       {/* Mobile Sidebar */}
-      <AnimatePresence>
-        {isOpen && (
-          <>
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-background/80 backdrop-blur-sm z-40 lg:hidden"
-            />
-            <motion.aside
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
-              transition={{ type: "spring", bounce: 0, duration: 0.3 }}
-              className="fixed inset-y-0 left-0 w-[80%] max-w-sm z-50 lg:hidden"
-            >
-              <SidebarContent />
-            </motion.aside>
-          </>
+      <div
+        onClick={() => setIsOpen(false)}
+        className={cn(
+          "fixed inset-0 bg-background/80 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300",
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
-      </AnimatePresence>
+      />
+      <div
+        className={cn(
+          "fixed inset-y-0 left-0 w-[80%] max-w-sm z-50 lg:hidden transition-transform duration-300",
+          isOpen ? "translate-x-0" : "-translate-x-full pointer-events-none"
+        )}
+      >
+        <SidebarContent />
+      </div>
     </>
   );
 }
